@@ -10,8 +10,8 @@ class Person {
     public void Display(){
         System.out.println("Фамилия: "+this.Familia+" Имя: "+this.Name+" Год рождения: "+this.Date);
     }
-    public String getFamilia() {
-        return Familia;
+    public void Vivod(Person person, Avto avto, Book book){
+        System.out.println(this.Name+" читает книгу "+book.getNamebook()+" про машину "+avto.Marka+".");
     }
 }
 class Avto {
@@ -25,9 +25,6 @@ class Avto {
     }
     public void Display(){
         System.out.println("Марка: "+this.Marka+" Год выпуска: "+this.Year+" Объём двигателя: "+this.V_dvigatel);
-    }
-    public String getMarka() {
-        return Marka;
     }
 }
 class Book {
@@ -54,6 +51,6 @@ public class Main {
         person.Display();
         avto.Display();
         book.Display();
-        System.out.println(person.getFamilia()+" читает книгу "+book.getNamebook()+" про машину "+avto.getMarka()+".");
+        person.Vivod(person, avto, book);
     }
 }
